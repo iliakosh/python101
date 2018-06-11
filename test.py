@@ -1,3 +1,8 @@
 import numpy as np
 import sys
-print(sys.version)
+#print(sys.version)
+
+def test():
+    print("test")
+
+test()

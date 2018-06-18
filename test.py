@@ -4,7 +4,7 @@ from math import acos,pi
 #print(sys.version)
 def gradys(vx1,vy1,vx2,vy2,x4,y4):
 	print('gradus',dlina(vx1,vy1,x4,y4)**2+dlina(vx2,vy2,x4,y4)**2-dlina(vx1,vy1,vx2,vy2)**2)
-	return (acos ((dlina(vx1,vy1,x4,y4)**2+dlina(vx2,vy2,x4,y4)**2-dlina(vx1,vy1,vx2,vy2)**2)/2/dlin a(vx1,vy1,x4,y4)/dlina(vx2,vy2,x4,y4)))/pi*180  
+	return (acos ((dlina(vx1,vy1,x4,y4)**2+dlina(vx2,vy2,x4,y4)**2-dlina(vx1,vy1,vx2,vy2)**2)/2/dlina(vx1,vy1,x4,y4)/dlina(vx2,vy2,x4,y4)))/pi*180  
 
 
 

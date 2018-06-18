@@ -7,9 +7,10 @@ def gradys(vx1,vy1,vx2,vy2,x4,y4):
 	return (acos ((dlina(vx1,vy1,x4,y4)**2+dlina(vx2,vy2,x4,y4)**2-dlina(vx1,vy1,vx2,vy2)**2)/2/dlin a(vx1,vy1,x4,y4)/dlina(vx2,vy2,x4,y4)))/pi*180  
 
 
+
 def dlina(xx1,yy1,xx2,yy2) :
 	return ((yy1-yy2)**2+(xx1-xx2)**2)**0.5
-	
+
 def test():
 	x1=int(input())
 	y1=int(input())

@@ -9,6 +9,7 @@ def gradys(vx1,vy1,vx2,vy2,x4,y4):
 
 def dlina(xx1,yy1,xx2,yy2) :
 	return ((yy1-yy2)**2+(xx1-xx2)**2)**0.5
+	
 def test():
 	x1=int(input())
 	y1=int(input())
@@ -19,6 +20,7 @@ def test():
 	x4=int(input('x4 : '))
 	y4=int(input('y4 : '))
 	
+
 	if (y2-y1)*(x3-x2)-(y3-y2)*(x2-x1)==0:
 		print("нельзя постоить треугольник")
 	else: 
@@ -46,5 +48,4 @@ def test():
 		print('ygol2 : ',ygo2 )
 		print('ygol3 : ',ygo3 )
 		
-print(acos(-1))		
 test()

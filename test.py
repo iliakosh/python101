@@ -3,8 +3,9 @@ import sys
 from math import acos,pi  
 #print(sys.version)
 def gradys(vx1,vy1,vx2,vy2,x4,y4):
-	print('gradus',dlina(vx1,vy1,x4,y4)**2+dlina(vx2,vy2,x4,y4)**2-dlina(vx1,vy1,vx2,vy2)**2)
-	return (acos ((dlina(vx1,vy1,x4,y4)**2+dlina(vx2,vy2,x4,y4)**2-dlina(vx1,vy1,vx2,vy2)**2)/2/dlina(vx1,vy1,x4,y4)/dlina(vx2,vy2,x4,y4)))/pi*180  
+	vr=(dlina(vx1,vy1,x4,y4)**2+dlina(vx2,vy2,x4,y4)**2-dlina(vx1,vy1,vx2,vy2)**2)/2/dlina(vx1,vy1,x4,y4)/dlina(vx2,vy2,x4,y4)
+	if vr<-1 : vr=-1
+	return acos(vr)/pi*180  
 
 
 
@@ -45,8 +46,11 @@ def test():
 		ygol1 =gradys(x1,y1,x2,y2,x4,y4) 
 		ygol2 =gradys(x1,y1,x3,y3,x4,y4)
 		ygol3 =gradys(x3,y3,x2,y2,x4,y4)
-		print('ygol1 : ',ygol )
-		print('ygol2 : ',ygo2 )
-		print('ygol3 : ',ygo3 )
+		print('ygol1 : ',ygol1 )
+		print('ygol2 : ',ygol2 )
+		print('ygol3 : ',ygol3 )
+		
+		if abs (ygol1+ygol2+ygol3-360)<0.0000001  : print ( "точка в треугольнике ")
+		else : print ("точка вне треугольника")
 		
 test()
